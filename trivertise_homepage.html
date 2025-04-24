@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trivertise</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-white to-gray-100 text-gray-800">
+  <header class="bg-white shadow p-4 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600">Trivertise</h1>
+      <nav class="hidden md:flex space-x-4">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#services" class="hover:text-blue-600">Services</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </nav>
+      <div class="md:hidden">
+        <button onclick="toggleMenu()">
+          <i data-lucide="menu" id="menuIcon"></i>
+        </button>
+      </div>
+    </div>
+    <div class="md:hidden mt-2 px-4 space-y-2 hidden" id="mobileMenu">
+      <a href="#about" class="block hover:text-blue-600">About</a>
+      <a href="#services" class="block hover:text-blue-600">Services</a>
+      <a href="#contact" class="block hover:text-blue-600">Contact</a>
+    </div>
+  </header>
+
+  <section class="text-center py-24 px-6 bg-white shadow-md rounded-xl mx-4 mt-10">
+    <h2 class="text-4xl font-bold mb-4 text-blue-700">Bring Your Brand to Life</h2>
+    <p class="text-lg text-gray-600 mb-6">
+      We help your business stand out with cutting-edge digital marketing and branding strategies.
+    </p>
+    <a href="#services" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition">
+      Explore Services
+    </a>
+  </section>
+
+  <section id="about" class="py-20 bg-gray-50 text-center px-6">
+    <h3 class="text-3xl font-semibold text-gray-800 mb-4">About Trivertise</h3>
+    <p class="text-gray-600 max-w-2xl mx-auto">
+      At Trivertise, we believe creativity meets strategy. Our team crafts personalized marketing solutions that connect you with your audience and drive results.
+    </p>
+  </section>
+
+  <section id="services" class="py-20 px-6 bg-white text-center">
+    <h3 class="text-3xl font-semibold text-gray-800 mb-10">Our Services</h3>
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-bold text-blue-700 mb-2">Video Editing & Content</h4>
+        <p class="text-gray-600">We edit raw videos for campaigns, reels, ads and help you craft compelling video content that engages.</p>
+      </div>
+      <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-bold text-blue-700 mb-2">Design & Graphics</h4>
+        <p class="text-gray-600">We design eye-catching static creatives, infographics, and campaign visuals that drive impact.</p>
+      </div>
+      <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-bold text-blue-700 mb-2">Content Creation</h4>
+        <p class="text-gray-600">We write scripts, captions, and content tailored for digital platforms to boost brand presence.</p>
+      </div>
+      <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-bold text-blue-700 mb-2">SMO & Digital Marketing</h4>
+        <p class="text-gray-600">We manage and optimize your social media presence to build audience and engagement.</p>
+      </div>
+      <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-bold text-blue-700 mb-2">Campaign Management</h4>
+        <p class="text-gray-600">We run, monitor, and optimize your campaigns to meet your KPIs and business goals.</p>
+      </div>
+      <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-bold text-blue-700 mb-2">Programmatic Solutions</h4>
+        <p class="text-gray-600">Leverage premium inventory with data-driven strategies including PMP and PG deals.</p>
+      </div>
+      <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-bold text-blue-700 mb-2">Full Funnel Strategy</h4>
+        <p class="text-gray-600">We offer end-to-end execution from content to results, so you can focus on growing your brand.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 bg-gray-100 px-6 text-center">
+    <h3 class="text-3xl font-semibold text-gray-800 mb-6">Get in Touch</h3>
+    <p class="text-gray-600 mb-8">Ready to elevate your brand? Let’s start a conversation.</p>
+    <a href="mailto:advertise@trivertise.com" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition">
+      Contact Us
+    </a>
+    <p class="mt-6 text-gray-600">Email us directly at <strong>advertise@trivertise.com</strong></p>
+
+    <form onsubmit="submitForm(event)" class="mt-10 max-w-md mx-auto bg-white p-6 rounded-xl shadow">
+      <div class="mb-4 text-left">
+        <label class="block text-sm font-medium mb-1" for="name">Name</label>
+        <input type="text" id="name" class="w-full px-4 py-2 border rounded-md" required />
+      </div>
+      <div class="mb-4 text-left">
+        <label class="block text-sm font-medium mb-1" for="number">Phone Number</label>
+        <input type="tel" id="number" class="w-full px-4 py-2 border rounded-md" />
+      </div>
+      <div class="mb-4 text-left">
+        <label class="block text-sm font-medium mb-1" for="email">Email</label>
+        <input type="email" id="email" class="w-full px-4 py-2 border rounded-md" required />
+      </div>
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+        Submit
+      </button>
+      <p id="thankYouMsg" class="mt-4 text-green-600 hidden">Thanks for submitting! We'll be in touch soon.</p>
+    </form>
+  </section>
+
+  <footer class="py-6 text-center text-gray-500 text-sm">
+    &copy; <span id="year"></span> Trivertise. All rights reserved.
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const toggleMenu = () => {
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('menuIcon');
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        icon.setAttribute('data-lucide', 'x');
+      } else {
+        menu.classList.add('hidden');
+        icon.setAttribute('data-lucide', 'menu');
+      }
+      lucide.createIcons();
+    };
+
+    const submitForm = (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const validEmail = /\S+@\S+\.\S+/.test(email);
+      if (name && validEmail) {
+        document.getElementById('thankYouMsg').classList.remove('hidden');
+        e.target.reset();
+      }
+    };
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
